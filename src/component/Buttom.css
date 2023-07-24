@@ -1,0 +1,13 @@
+.btn {
+    font-size: 30px;
+    background: purple;
+}
+body {
+   min-height: 100vh;
+   display: grid;
+   place-content: center; 
+   border: none ;
+   background: rgba(34, 33, 33, 0.207);
+   
+
+}
