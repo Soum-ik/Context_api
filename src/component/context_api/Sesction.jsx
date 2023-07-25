@@ -1,12 +1,17 @@
 import Content from "./Content";
+import React from "react";
 
-function Section() {
-  return (
-    <div>
-      <h1>This is a section.</h1>
-      <Content />
-    </div>
-  );
+export default class Section extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+  render() {
+    console.log("Section rendered /n");
+    return (
+      <div>
+        <h1>This is a section.</h1>
+        <Content />
+      </div>
+    );
+  }
 }
-
-export default Section;

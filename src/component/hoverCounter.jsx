@@ -1,4 +1,9 @@
-function HoverCounter({ count, incrementCount, theme }) {
+import Check from "./checker";
+
+function HoverCounter({ count, incrementCount, theme, switchTheme }) {
+  console.log("hover rendered");
+
+  // console.log(changer);
   const style =
     theme === "dark"
       ? {
@@ -7,12 +12,15 @@ function HoverCounter({ count, incrementCount, theme }) {
           fontSize: "60px",
         }
       : null;
-
   return (
     <div>
       <h1 style={style} onMouseOver={incrementCount}>
         Mouse {count} over.
       </h1>
+      <button type="button" onClick={switchTheme}>
+        Switch
+      </button>
+      <Check />
     </div>
   );
 }
